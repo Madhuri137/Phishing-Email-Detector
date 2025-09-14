@@ -1,0 +1,101 @@
+Delivered-To: madhuriprajapati2004@gmail.com
+Received: by 2002:a05:7412:4442:b0:188:34b5:bbb with SMTP id e2csp242936rdd;
+        Mon, 25 Aug 2025 19:50:20 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEvwot6Xx6dkdS9bMYu1hdEb6fQinAU1Fki8cEbMBmBaYo2aEvmoKoWac6Iu+e9KZUzoh5E
+X-Received: by 2002:a05:6000:18ad:b0:3b7:948a:1361 with SMTP id ffacd0b85a97d-3c5da741330mr10296106f8f.6.1756176620662;
+        Mon, 25 Aug 2025 19:50:20 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1756176620; cv=none;
+        d=google.com; s=arc-20240605;
+        b=jdyDdXOh6tR7p5HNqVGwOAdsxaA6lCrzF2gNnbryB3QJfcT8v8wZ/2gnGCYWkkIFlv
+         pU1TSUG1ik86BNE+OREy8fzG6sLQNaCfIRLG7vJ6gsR938wT34b5VAAsCkTCtlcU71eF
+         l9H09skS0FZG2wlI8jksJ4csiePdSj+5TTeINURyQ0E1eLU4TWqqkSlpGHUKb/bv6faP
+         LdrcQ3Ym5sbTlcIfejajd2iDZE2MAbB83Edif3WcwpMI5fO2cWO9qViRrE37NapfXrjs
+         GR7+DVpG4CbLX5Jh1I8qumOJmCrzMFnBskTaUxZBEXceP6qxhWHEHKL8o1hPm5T0jLd7
+         AcaA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe-post:list-unsubscribe
+         :content-transfer-encoding:mime-version:subject:message-id:to
+         :reply-to:from:date:dkim-signature;
+        bh=Jh1q35p75E6pxNzLZn0cQFeYesS4smhyd0RBCEJZNPA=;
+        fh=bs+uIspvKDfpqk3h0YMj6/XbbnG90Yld49bLX49i96s=;
+        b=gPQDYiY9oI7xQwFSy1rRTQtkxv2Cf404fNQQSbDPDRk0HRqFpdsWDvLYIgnNqHim7p
+         vZbgumuZMw4ETQETboURrJX1OY805C8lyaQmQQDRx+RUlS3LjOTfUSAGgATvxnjwud+G
+         lgTRGozizFIbxhflMU3me75/ognIZSKsgusCJ4hzwNYikS7tWM1z23u0DMcG3aLcexZr
+         148e7kVaxUjZ8rfjvvXuoVmjG7/HBJ5joVedwIn7TpSojlMDwBH0/fqZ84yLgTE0H9id
+         HAth2ivx+3vjWMGioN9jr9ourHSN327PkzjZh//o3dkJ+WXr1dQQ+4uMewei1GKcl3vh
+         ExMg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@jobalertshub.com header.s=default header.b=F8Ls56cs;
+       spf=pass (google.com: domain of bounce+noreply-madhuriprajapati2004=gmail.com@jobalertshub.com designates 164.132.135.204 as permitted sender) smtp.mailfrom="bounce+noreply-madhuriprajapati2004=gmail.com@jobalertshub.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=jobalertshub.com
+Return-Path: <bounce+noreply-madhuriprajapati2004=gmail.com@jobalertshub.com>
+Received: from jobhost.jobalertshub.com (jobhost.jobalertshub.com. [164.132.135.204])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3c913e69042si2559161f8f.684.2025.08.25.19.50.20
+        for <madhuriprajapati2004@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 25 Aug 2025 19:50:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+noreply-madhuriprajapati2004=gmail.com@jobalertshub.com designates 164.132.135.204 as permitted sender) client-ip=164.132.135.204;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@jobalertshub.com header.s=default header.b=F8Ls56cs;
+       spf=pass (google.com: domain of bounce+noreply-madhuriprajapati2004=gmail.com@jobalertshub.com designates 164.132.135.204 as permitted sender) smtp.mailfrom="bounce+noreply-madhuriprajapati2004=gmail.com@jobalertshub.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=jobalertshub.com
+Received: from localhost (jobhost.jobalertshub.com [164.132.135.204])
+	by jobhost.jobalertshub.com (Postfix) with ESMTP id 64FD1C2D7B1B
+	for <madhuriprajapati2004@gmail.com>; Tue, 26 Aug 2025 08:20:20 +0530 (IST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=jobalertshub.com;
+	s=default; t=1756176620;
+	bh=Jh1q35p75E6pxNzLZn0cQFeYesS4smhyd0RBCEJZNPA=;
+	h=Date:From:Reply-To:To:Subject:List-Unsubscribe:From;
+	b=F8Ls56csDFMErDb3eF0ig+ZiwvM9uVnhHqbp3tpfxxLHMNAvoXDMODYuCqcBzHXTD
+	 9KZ7HE41VLfF4yTeb4y0eavS3PMFuBilh7n0rpeP4J48Lh5VmQCSrqikYxDejhYtDg
+	 R0OQvmHksZQ4hpIwPbkYpxStrm7oKh8m0DRmcJJA=
+Date: Tue, 26 Aug 2025 08:20:20 +0530 (IST)
+From: SBI Recruitment <noreply@jobalertshub.com>
+Reply-To: SBI Recruitment <noreply@jobalertshub.com>
+To: madhuriprajapati2004@gmail.com
+Message-ID: <37246.1.340.uSYNl5bPmEmc4TRaYp6es16Ms@jobalertshub.com>
+Subject: Manager & Deputy Manager Job Notification
+MIME-Version: 1.0
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: 7bit
+List-Unsubscribe: <https://jobalertshub.com/unsubscribe/list/yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaLXqPQxaNGHdz31wyMM1FB3lkL2-nMFnlKVep2KlfVFAQYS_oNO4WRV6PO_NZjOObCK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXqy3NqSE4gGoO2A-Xaw4SmS4TKkRJJzneQFiI7fyui_nUNzNa5AV3nkfX6D10R-F_diAWm2oBByS1YfcYpzZAyIWK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2R7HFO14OGntVUx0EiyotzoHgZ6P10jE_3BRUCZrpjz_vKfBm49ozWKJsrzoo3uQy-rHwgHISO-Qxg5onTndPRA=?source=email-client-unsub-button>, <mailto:unsubscribe@jobalertshub.com?subject=unsubscribe_yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaLXqPQxaNGHdz31wyMM1FB3lkL2-nMFnlKVep2KlfVFAQYS_oNO4WRV6PO_NZjOObCK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXqy3NqSE4gGoO2A-Xaw4SmS4TKkRJJzneQFiI7fyui_nUNzNa5AV3nkfX6D10R-F_diAWm2oBByS1YfcYpzZAyIWK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2R7HFO14OGntVUx0EiyotzoHgZ6P10jE_3BRUCZrpjz_vKfBm49ozWKJsrzoo3uQy-rHwgHISO-Qxg5onTndPRA=>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: 37246:JOBALERTSHUB
+
+<table style="width: 600px; margin: 0 auto; color: #c3c3c3;" align="center">
+<tbody>
+<tr>
+<td><span style="font-size: 10px; font-family: Arial,Helvetica,sans-serif; color: #aaaaaa;"></span></td>
+</tr>
+</tbody>
+</table>
+<table style="font-family: Arial,Helvetica,sans-serif; font-size: 12px; background: #fff; border-radius: 3px 3px 3px 3px; border-top: 4px solid #291f75; max-width: 600px; table-layout: fixed; margin: 0 auto;" border="0" width="600" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="padding: 10px; width: 600px;">
+<table style="background: #fff; border: 0px solid #ededed; font-family: Helvetica,arial,sans-serif;" border="0" width="95%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="font-size: 18px; font-weight: bold; line-height: 20px; border-bottom: 1px solid #ededed; padding: 10px; padding-bottom: 25px; color: #0f75bc;" align="center"><a style="color: #333; text-decoration: none;" href="http://jobalertshub.com/trk/click/yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaLXqPQxaNGHdz31wyMM1FB3lkL2-nMFnlKVep2KlfVFAQYS_oNO4WRV6PO_NZjOObCK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXqy3NqSE4gGoO2A-Xaw4SmS4TKkRJJzneQFiI7fyui_nUNzNa5AV3nkfX6D10R-F_diAWm2oBByS1YfcYpzZAyIWK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2R7HFO14OGntVUx0EiyotzoHgZ6P10jE_3BRUCZrpjz_vKfBm49ozWKJsrzoo3uQy-rHwgHISO-Qxg5onTndPRA=" target="_blank" rel="noopener">SBI Recruitment 2025 </a></td>
+</tr>
+<tr>
+<td><a href="http://jobalertshub.com/trk/click/yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaLXqPQxaNGHdz31wyMM1FB3lkL2-nMFnlKVep2KlfVFAQYS_oNO4WRV6PO_NZjOObCK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXqy3NqSE4gGoO2A-Xaw4SmS4TKkRJJzneQFiI7fyui_nUNzNa5AV3nkfX6D10R-F_diAWm2oBByS1YfcYpzZAyIWK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2R7HFO14OGntVUx0EiyotzoHgZ6P10jE_3BRUCZrpjz_vKfBm49ozWKJsrzoo3uQy-rHwgHISO-Qxg5onTndPRA=" target="_blank" style="display: block; border: none;" rel="noopener"> <img src="http://jobalertshub.com/images/6904617002/sbi.png" style="display: block; border: none; height: 315px;" /></a></td>
+</tr>
+<tr>
+<td style="font-size: 16px; line-height: 22px; padding: 10px; padding-bottom: 25px; width: 600px; text-align: justify;"><a style="color: #333; text-decoration: none;" href="http://jobalertshub.com/trk/click/yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaLXqPQxaNGHdz31wyMM1FB3lkL2-nMFnlKVep2KlfVFAQYS_oNO4WRV6PO_NZjOObCK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXqy3NqSE4gGoO2A-Xaw4SmS4TKkRJJzneQFiI7fyui_nUNzNa5AV3nkfX6D10R-F_diAWm2oBByS1YfcYpzZAyIWK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2R7HFO14OGntVUx0EiyotzoHgZ6P10jE_3BRUCZrpjz_vKfBm49ozWKJsrzoo3uQy-rHwgHISO-Qxg5onTndPRA=" target="_blank" rel="noopener"> SBI Manager &amp; Deputy Manager 2025 job notification, individuals who have successfully completed their... </a></td>
+</tr>
+<tr>
+<td align="center"><a style="background-color: #291f75; border: 1px solid #291f75; border-radius: 3px; color: #ffffff; display: inline-block; font-family: sans-serif; font-size: 20px; line-height: 44px; text-align: center; text-decoration: none; padding: 0px 40px; -webkit-text-size-adjust: none; mso-hide: all;" href="http://jobalertshub.com/trk/click/yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaLXqPQxaNGHdz31wyMM1FB3lkL2-nMFnlKVep2KlfVFAQYS_oNO4WRV6PO_NZjOObCK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXqy3NqSE4gGoO2A-Xaw4SmS4TKkRJJzneQFiI7fyui_nUNzNa5AV3nkfX6D10R-F_diAWm2oBByS1YfcYpzZAyIWK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2R7HFO14OGntVUx0EiyotzoHgZ6P10jE_3BRUCZrpjz_vKfBm49ozWKJsrzoo3uQy-rHwgHISO-Qxg5onTndPRA=">More Details &gt;&gt;</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background: #fafafa; padding: 10px; border-top: 1px solid #ccc; font-size: 11px; color: #666; width: 600px;" align="center">
+<p style="font-size: 12px; line-height: 22px; color: #999;">If you do not want to receive emails from us <a style="color: #999;" href="http://jobalertshub.com/unsubscribe?id=yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaLXqPQxaNGHdz31wyMM1FB3lkL2-nMFnlKVep2KlfVFAQYS_oNO4WRV6PO_NZjOObCK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXqy3NqSE4gGoO2A-Xaw4SmS4TKkRJJzneQFiI7fyui_nUNzNa5AV3nkfX6D10R-F_diAWm2oBByS1YfcYpzZAyIWK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2R7HFO14OGntVUx0EiyotzoHgZ6P10jE_3BRUCZrpjz_vKfBm49ozWKJsrzoo3uQy-rHwgHISO-Qxg5onTndPRA=">click here</a> to unsubscribe.</p>
+</td>
+</tr>
+</tbody>
+</table><img src="https://jobalertshub.com/track/open/yAEfm3pMH_F0FA1uE0C3SGvlsdpB1l5mzYrR1z_4jaLXqPQxaNGHdz31wyMM1FB3lkL2-nMFnlKVep2KlfVFAQYS_oNO4WRV6PO_NZjOObCK_yDU6IcL0LOFQ3owEwLp_b0eWGDe1lQQi6MatwcXqy3NqSE4gGoO2A-Xaw4SmS4TKkRJJzneQFiI7fyui_nUNzNa5AV3nkfX6D10R-F_diAWm2oBByS1YfcYpzZAyIWK_yDU6IcL0LOFQ3owEwLp4lEaIXj3UHCzxKj0LVgY2R7HFO14OGntVUx0EiyotzoHgZ6P10jE_3BRUCZrpjz_vKfBm49ozWKJsrzoo3uQy-rHwgHISO-Qxg5onTndPRA=?d=jobalertshub.com&sid=79773" width="1" height="1"/>

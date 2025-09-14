@@ -1,0 +1,597 @@
+Delivered-To: molisha137@gmail.com
+Received: by 2002:a05:7022:2509:b0:ba:ff24:87f7 with SMTP id ds9csp2889516dlb;
+        Wed, 10 Sep 2025 12:07:10 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IELBqQUEIwuZePisTnnJnKxX7fh9I1GJvom3s8iC+cvfFHwbu+KPYBwtGA6di/SfbsXw6xi
+X-Received: by 2002:a05:620a:7089:b0:816:3bf9:69ec with SMTP id af79cd13be357-8163bf96be6mr1567896185a.24.1757531230054;
+        Wed, 10 Sep 2025 12:07:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1757531230; cv=none;
+        d=google.com; s=arc-20240605;
+        b=iTK8hbJcvxs8hpZy4DGCKsDCGpWOJFgvt0nOX5KK+EdFBMljGBLKyPN4hHDE7ig3pN
+         V6YSXVlR3Crp+ZCZyjdVhn+qvcx9jJkzMZ1gZjJA2K53Ee9zLE1WMZDMwfpe3i0XGDvn
+         j9m0L2lOGcTSSxbmhDbYqiIb/Bhn8Q8E04r8FpjNaX0Ql1UGQqzB7dIOkS3fevx0Te9O
+         ZvJkuCT8lptCA1Mp9HssrYO1mwBDYLSx4qj3881vvLHeBkffurfy8QkSW8ogdeO2MkJM
+         wEi/bMLqMeQLwBdLw0801IymC/s5iUVF2kQzw8lQkRzQN9U+0wr55kYDL3NAueUDIViE
+         L37w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:mime-version:subject:message-id:to:reply-to:from:date
+         :dkim-signature:dkim-signature;
+        bh=EN3IXfz/Eti8V3qypR5JL6lGRpVJznrpclG/+5EtZVw=;
+        fh=xnYTs1wR5wjGMXhhviiwiVkHqj0aht9VSUf51JU1ylQ=;
+        b=dCZIAXJleAZj3cwqIPER5azAZatbxKfgJjHlb7kzsqIcw/nqZwom8b+tzNHdBbS3rj
+         1Th3NhSX3TCGNt6J96oC5g958GwDrz4jvfu6EIjY9cahdr5+3y0Lw639m+Oj9054Ttfw
+         pFy+n0KuWpUPxiaxkhydI46qzs3B6fCfoeroG+0okpKWb+yTgzmKOOQL3ScmSsix4yk/
+         e8Ky3OmZnAQ9JxUuNNC75vuFOqza/Xp742rzNkAyDYqlXf1ZPJk8yKpwS7yr5PIFToW/
+         RWIFrqiVJ1fdWRLmiI3Iu2q0Bgot+ouiiduhuAb+EpCqf4rsq+KZVOy3noqUkB+PZArm
+         xcEw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@4740448t.educative.io header.s=hs1 header.b=AN0YC4sn;
+       dkim=pass header.i=@educative.io header.s=hs1-4740448 header.b=Oixg6UVs;
+       spf=pass (google.com: domain of 1axb14wlseaeekopy94b58hzdk5ufbu3p9pm91-molisha137=gmail.com@4740448t.educative.io designates 158.247.26.39 as permitted sender) smtp.mailfrom="1axb14wlseaeekopy94b58hzdk5ufbu3p9pm91-molisha137=gmail.com@4740448t.educative.io";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=educative.io
+Return-Path: <1axb14wlseaeekopy94b58hzdk5ufbu3p9pm91-molisha137=gmail.com@4740448t.educative.io>
+Received: from bid476x.4740448t.educative.io (bid476x.4740448t.educative.io. [158.247.26.39])
+        by mx.google.com with ESMTPS id af79cd13be357-81b5dffe717si197781185a.453.2025.09.10.12.07.09
+        for <molisha137@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 10 Sep 2025 12:07:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 1axb14wlseaeekopy94b58hzdk5ufbu3p9pm91-molisha137=gmail.com@4740448t.educative.io designates 158.247.26.39 as permitted sender) client-ip=158.247.26.39;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@4740448t.educative.io header.s=hs1 header.b=AN0YC4sn;
+       dkim=pass header.i=@educative.io header.s=hs1-4740448 header.b=Oixg6UVs;
+       spf=pass (google.com: domain of 1axb14wlseaeekopy94b58hzdk5ufbu3p9pm91-molisha137=gmail.com@4740448t.educative.io designates 158.247.26.39 as permitted sender) smtp.mailfrom="1axb14wlseaeekopy94b58hzdk5ufbu3p9pm91-molisha137=gmail.com@4740448t.educative.io";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=educative.io
+Received: by 172.16.154.85 with SMTP id a0cgfhxxtp4xci16b754p50x747puf2pfak24gm3pvu;
+        Wed, 10 Sep 2025 19:07:06 GMT
+DKIM-Signature: v=1; s=hs1; d=4740448t.educative.io; 
+        i=@4740448t.educative.io; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=EN3IXfz/Eti8V3qypR5JL6lGRpVJznrpclG/+5EtZVw=; 
+        b=AN0YC4snF2ck7291zCVl7LUBiwM2gwoT8eopAJMbtGOKOI128ex2ra7++toPOT
+         SeFE3Xm4ZEUNUrrwISUUcTn+aou7inkS5EuENuhJ3FImLDei53XjlUa+Jcw/fhd
+         IixTXt/+JUY1pbpH0vlk+rSTxtRKYNRIHy2Kht4eOqP0l1Hc/dII6/T6bliUf+B
+         XrPOKySSYNRS8NVg2VOnyy4cMH8WPfAY9rM5dCvK0BxeL4QuzdHmPs1giJmm4E4
+         ffj9Npq6r37iKOJguaA2KHyxyC/al5ecfugeNF26EUQgUUhIQV4gfv9kZd7S2o/
+         PRK19OsT9/UAzuz3FOAbAarp9zqw==; q=dns/txt; t=1757531226; 
+        x=1757794026;
+DKIM-Signature: v=1; s=hs1-4740448; d=educative.io; 
+        i=@educative.io; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=EN3IXfz/Eti8V3qypR5JL6lGRpVJznrpclG/+5EtZVw=; 
+        b=Oixg6UVsOYV3OiBxUB9v/wqUle2/dh/ksXyLYKknizPkrgOHeU19TH5jbmibkt
+         FE0Q9JXnt7kP77CLWZAyEihViEXsYRUzZ+INXy6V7u+M965jBhpNU0z2TaYudfT
+         syxGMrntNROTfcOur1SYvD6w6r97TqVx8RykXdO+WXF1OlkDe3oz7DmkXSrb/zB
+         ESbiHB96mnzheyf7dPpoPncjaCxfUkC65jVzdRQTWZvgXYYqo2HNh56e+gYSOFf
+         xqdFGhvmAkMPQa1rWlunP8v6MfMHQfZAttm0Jh4dc5yAA7pqcPs0kvZMBt9J1Gd
+         Et2bzrr8u1CxSTk/s0JrQAveiQ7w==; q=dns/txt; t=1757531226; 
+        x=1757794026;
+Return-Path: <1axb14wlseaeekopy94b58hzdk5ufbu3p9pm91-molisha137=gmail.com@4740448t.educative.io>
+X-HS-Cid: 1axftvjno16q366nolaj43didan7um9fvf8zrt
+Date: Wed, 10 Sep 2025 12:07:06 -0700
+From: The Educative Team <support@educative.io>
+Reply-To: support@educative.io
+To: molisha137@gmail.com
+Message-ID: <1757531226478.d57c103a-60b5-41a6-bad4-546abace167b@4740448t.educative.io>
+Subject: Claude Code & Gemini Code courses are here
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_215992_1339117078.1757531226569"
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+Feedback-ID: aec3v1e:aigkeubg:aib1s:HubSpot
+
+------=_Part_215992_1339117078.1757531226569
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Molisha, here's your early access to two new AI skills resources.
+
+* Note: You are receiving this product update email because you have an act=
+ive Educative account. If you wish to unsubscribe from product updates, you=
+ can do so anytime.
+
+Molisha,
+
+We have added two new AI courses to the catalog:
+
+- Claude Code: Workflows and Tools (https://learn.educative.io/e3t/Ctc/RG+1=
+13/cz5H404/VW_-3K279YHtW64-svs3WBGLMW4vJbXQ5ChGLmN412xbF3prCCW8wLKSR6lZ3ksV=
+M4SWL5Vn0MjW4kGj64928V4kW2l8Xqs2QrbrzW9lgZhj8KpQBVW6X-_PJ2QW4yNW1T84qk50L4J=
+cW2Hrx9l5ZT7bnW7NJqQD70FFw_W49gMJp41PrfHW211wSd2TsTLdMx1s1nDr0btV-xzCP43srd=
+gW4MqF1T7mY_2hW5kq4Dj9gB5D_W2bj3986rRYC_W3wHbCc3_YgTDV-jCk73DcGVCW6_XKzv60q=
+1VXV9zJ8q6gfb25W2GQPWf1FY4hVW3gQSSZ8YLQGpW43rCvY2CW7YDMmLhzpWS5z2V8dWrH7J5v=
+6ZVTTll58Pf7bRW3Bhw5Q933bdjW61yJQG5TxPWJVTBgdx65S2wgf1csdVq04 )
+- Building Applications with Gemini Code Assist (https://learn.educative.io=
+/e3t/Ctc/RG+113/cz5H404/VW_-3K279YHtW64-svs3WBGLMW4vJbXQ5ChGLmN412x8T5m_5PW=
+50kH_H6lZ3nKW3Mpsfb4rtPlQW72f7y12m8PYXW5DddLf13d5q1VZwQNw4nsp0cW7mRpTk3sRqv=
+0W2MXgqw1_Nnw-W1wBVlJ86HlyQW5Cr4WX3JnB3VW1CYd6n8mlqdfW64qYrm32Yfw3W82V8115F=
+4_KvVMQfPV8N6PVCW7VFlhR4dVDzLVqFQQq3QnD-hVCKjDJ3q3m_hW5wk46P66pJk6N4jKn2dCF=
+L5pW3dFyck3vlZdVW7xMkRW1G5R8GW6CctKJ7tzB54W8QNw-d8fbprFW220nSG2hBKVVW1rK4N7=
+2sXGNZW3HGsMl1SVwhXW8pmLhH1_9D49VXfBDQ88fcRQW4ywSPd70zblJN6ZlJwSHR3Z_N35224=
+29tv1BW4x3l0g7lZ5_yW6s63JV8DRwWPW7cZgGF8TXc82f3Vgmyq04 )
+
+In addition, we made some enhancements to this popular resource:
+
+- Become an Agentic AI Expert (https://learn.educative.io/e3t/Ctc/RG+113/cz=
+5H404/VW_-3K279YHtW64-svs3WBGLMW4vJbXQ5ChGLmN412xbY3prCCW95jsWP6lZ3pdW1J71S=
+P2FyC7lW2GXKXy6LB-34VR6MPW18KKh6W6LqBvS1qDH6vW3-662w22rCb5W4vGSbg4Q6q34W35D=
+K472DjKJwW5q9yVq7lxc6QW4Cw2H174Z85jW41Cy_B3zZSPbW64XZn67qrTqlW7D6V_51Gd7V0N=
+2q1MQPWPXplW8mGbYm3fWyJQW6YWqjR7m3hdsW6rRHlC2SDhJ_W3gtc352RYCVRV-7HLs247Rsp=
+W8f4GWl1GSWbxW19tgr490BR2gW6gwC146C4MMxVpR_KQ92GrpcVQy-kG9k_v_5W796W_T47VRD=
+VW99cH1L77p8W0W4SfmqH3Mmx6RW4y1qSD8ZtW9-W3g-gY84B8XhGW113LwL2bZ-_sW340TwM7c=
+2Hjsf6_Hz_P04 )
+
+Please enjoy and share your feedback.
+
+- The Educative Team
+
+Educative, 12280 NE District Way, Bellevue,WA, 98005 United States
+
+Email Preferences (https://learn.educative.io/hs/preferences-center/en/page=
+?data=3DW2nXS-N30h-GgW2vSX7Q4krYDcW2RhQj-43WJYHW3jr3Nx3BYtxbW23kjYl3bhrQYW4=
+p9pnT4mzQ9JW4pnbJn23nc65W1L7VzQ45GzS3W2YD3bX22YtV7W4rBb823M2gsxW251Kng1N4Kb=
+VW2HsZ5s3T49p2W3bj8m72-GkR3W4rw4bG3QTJBLW3zb3t72RzmH2W2sPP3p2HR30MW3SBY0440=
+053BW23mpG53JHZvhW2WfhcY3M7g83W3F9zpG1YX2tNW1QCR-S4t5GhgW47F3Q42-g62BW4fhzJ=
+s1NlxT3W3jdjND2vP-TrW30DTVt43CRjFW2KQsTf3jf4ScW4klSRW1S8ZG8W2Yx1GW3QDSD7W21=
+3PfP2CVl1nW2xXVCk4rmYg_W36Crkt32b13-W2CwPSw3SC27FW4tzCVs2KDtm-W3T1hhq30b_dM=
+W1LrgNS3W3zxTW4kpsR647pdMWW2YCGq23h-6VkW3jsLqY4kb7xnW36xhzt3j6XGCW3DLTN0367=
+TnbW1LmXBV2-cCC6W1Nh9Xq3H4nfcW43ZBSL3DX2HYW21kscv41G3zjW1Nx2xJ2p8R6zW2Tt_HV=
+3bdS9kW3_vc9L2zJBVQW4r49nN1LHF94W1Ztrhy3K52RQW4hg3Fm1ZnkDZ0&_hsenc=3Dp2ANqt=
+z-_W0MMoKW37ruptYMBr-zle0uvyQMBe_TjL5FptQUbTnZiyOsGGLHIRByhgxVgKTnI6N_KmG0h=
+Ml29HuI24akFlSsQD0w&_hsmi=3D379805802 )
+------=_Part_215992_1339117078.1757531226569
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>Claude Code &amp; Gemini Code courses are here</title>
+    <meta property=3D"og:title" content=3D"Claude Code &amp; Gemini Code co=
+urses are here">
+    <meta name=3D"twitter:title" content=3D"Claude Code &amp; Gemini Code c=
+ourses are here">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #DFE8F2;}
+</style>
+<![endif]-->
+<!--[if mso | IE]>
+  <style type=3D"text/css">
+    .hse-column-container { border: none !important; padding: 0 !important;=
+ }
+  </style>
+<![endif]-->
+   =20
+     =20
+ =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"https://learn.educative.io/-temporary-slug-d9c352d4-7542-41ea-a484=
+-636dd04a8601"><meta name=3D"robots" content=3D"noindex,follow"><!--[if !((=
+mso)|(IE))]><!-- --><style type=3D"text/css">@media only screen and (max-wi=
+dth:639px){img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-stretc=
+h-cta .hs-cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}@media only screen and (max-width:639px){.hse-border-m{border-left:1px sol=
+id #ccc !important;border-right:1px solid #ccc !important;box-sizing:border=
+-box}
+.hse-border-bottom-m{border-bottom:1px solid #ccc !important}.hse-border-to=
+p-m{border-top:1px solid #ccc !important}
+.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-=
+bottom:none !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-12{max-width:600px !important;width:600px !impo=
+rtant}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-12=
+{max-width:600px !important;width:600px !important}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-top:=
+20px !important}
+#section_17419740322953 .hse-column-container{padding-top:0px !important;pa=
+dding-bottom:0px !important}
+#section_17419740322953 .hse-column-container{background-color:#1d2b8d !imp=
+ortant}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-bott=
+om:20px !important}
+#section_1730262709971 .hse-column-container{background-color:#dfe8f2 !impo=
+rtant}
+}</style><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_=
+main a[x-apple-data-detectors]{color:inherit !important;text-decoration:non=
+e !important;font-size:inherit !important;font-family:inherit !important;fo=
+nt-weight:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}
+.ShadowHTML p,.sh-modified-inline p{margin:0}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#DFE8F2" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Helvetica, Arial, sans-serif; font-size:18p=
+x; color:#232342; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#DFE=
+8F2;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+" lang=3D"en">Molisha, here's your early access to two new AI skills resour=
+ces.</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#dfe8f2" bgcolor=3D"#dfe8f2">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"margin:0; padding:0; width:100% !impo=
+rtant; min-width:320px !important; height:100% !important" width=3D"100%" h=
+eight=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Helvetica, Arial, sans-serif; font-size:18px; color:#232342; word-brea=
+k:break-word; padding-top:20px; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section_17419740322953" class=3D"=
+hse-section hse-section-first" style=3D"padding-left:10px; padding-right:10=
+px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#1d2b8d" bgcolor=3D"#1d2b8d">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#1d2b8d">
+      <tr style=3D"background-color:#1d2b8d;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1741974032295-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17419740322952" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#232342; word-break:break-word;=
+ text-align:center; padding:10px 20px; font-size:0px">
+        <img alt=3D"Educative" src=3D"https://learn.educative.io/hs-fs/hubf=
+s/Educative_Horizontal%20Logo_White-1.png?width=3D500&amp;upscale=3Dtrue&am=
+p;name=3DEducative_Horizontal%20Logo_White-1.png" style=3D"outline:none; te=
+xt-decoration:none; max-width:100%; font-size:16px" width=3D"250" align=3D"=
+middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1730262757789" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff; padding-bottom:5px; padd=
+ing-top:20px" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-bottom:5px; padding-top:2=
+0px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1730262757789_0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:18px; color:#232342; w=
+ord-break:break-word; padding:10px 20px 5px"><div id=3D"hs_cos_wrapper_modu=
+le_17056165967531" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wra=
+pper_type_module" style=3D"color: inherit; font-size: inherit; line-height:=
+ inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module">=
+<div id=3D"hs_cos_wrapper_module_17056165967531_" class=3D"hs_cos_wrapper h=
+s_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit=
+; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"wi=
+dget" data-hs-cos-type=3D"rich_text"><p style=3D"font-size:14px; line-heigh=
+t:150%"><span style=3D"color: #000000;"><em><span style=3D"font-weight: bol=
+d;">*</span> <span style=3D"font-weight: bold;">Note: </span>You are receiv=
+ing this product update email because you have an active Educative account.=
+ If you wish to unsubscribe from product updates, you can do so anytime.</e=
+m></span></p>
+<p style=3D"font-size:16px; line-height:150%">&nbsp;</p>
+<p style=3D"font-size:16px; line-height:150%"><span style=3D"color: #000000=
+;">Molisha,</span></p>
+<p style=3D"font-size:16px; line-height:150%">&nbsp;</p>
+<p style=3D"font-weight:normal; line-height:150%"><span style=3D"color: #00=
+0000;"><span style=3D"font-size: 16px;">We have added two new AI courses to=
+ the catalog:</span></span></p></div></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:18px; color:#232342; word=
+-break:break-word; padding:10px 20px 5px"><div id=3D"hs_cos_wrapper_module_=
+17484586603801" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrappe=
+r_type_module" style=3D"color: inherit; font-size: inherit; line-height: in=
+herit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><di=
+v id=3D"hs_cos_wrapper_module_17484586603801_" class=3D"hs_cos_wrapper hs_c=
+os_wrapper_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; f=
+ont-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widge=
+t" data-hs-cos-type=3D"rich_text"><ul style=3D"line-height:175%">
+<li><a href=3D"https://learn.educative.io/e3t/Ctc/RG+113/cz5H404/VW_-3K279Y=
+HtW64-svs3WBGLMW4vJbXQ5ChGLmN412xbY3qgz0W95jsWP6lZ3mDW1DKDhF1MGFL1W4y8HjS6h=
+PvbQW6x-cM88jC9PfW5ZFwN64J9ZFJV3hky57lCXxcW99yyVX5SCjrBW4ZVXWH4-r0qYW8WfQlt=
+3JLmp5W6JsYQz5NYVTDW77mLHP6398glN5M0-vGq-sKsW7tXn7r77cyDtW4GdHCX30zvyzW4vzx=
+rW1HZ7b-W2mQVTP9fPmwsW1pw6S65-3kKrW5PJGDz43DstvN4GFcZlhvxP6W53Y-_v5tg8cgW3K=
+1kdp5S4_b_W77VRFR55-JjGW8TtPdz4qrhYqW64c4Cq2p0HT5N34d7wm--tXDN3Ls72GRm3-vW8=
+kzTV78y21N1W8vVz9b4FjpdxW3cfhks3dBsZfW2HG9H57qsbPkW3wcJPS8ssgXGf93Mvvd04" s=
+tyle=3D"color:#4951f5; font-weight:bold" rel=3D"noopener" data-hs-link-id=
+=3D"0" data-hs-link-id-v2=3D"TCziRNBF" target=3D"_blank">Claude Code: Workf=
+lows and Tools</a></li>
+<li><a href=3D"https://learn.educative.io/e3t/Ctc/RG+113/cz5H404/VW_-3K279Y=
+HtW64-svs3WBGLMW4vJbXQ5ChGLmN412x985nR3bW5BWr2F6lZ3ksVSTYg08V1CpDW5QFf9j4mK=
+9KqW5D0y6L1w_XBDW1GMHLL5NzlQFW5P_P2S9gSfgQW4F3PCS5vxT_SW8jKybw6blb9fVWZJfK6=
+gvrmXN22C5MXJvm68N4PxbyRzPfn1W1fzGfD3lXznDW8MG1Nv22rPQRW7G19BT4kbPswW517ZLy=
+6_bFX4W22fw2k31gkdnW8q77yT4fJ2sBW6jZ7nB1X4B26W2hRXjD3wrxfsW5Pd_P959D89sW319=
+cmM1sq3WPW8b4zpt1DF7wMW79Ns-F8XCn6fW8dY-nH93SR9gW3Z420K8W5QnCW4Nwj1T4QKjs7W=
+57f7B057jjlsW655C3J7lpG-4W7R9kCm2p-j8LVrw83M3Mths5W95rwFb8HMvCpW8y4h2r5YcjH=
+YVQ3c067rbKG2W27td0g7-l60qW7DLd4-7PpRGnf8rfJfK04" style=3D"color:#4951f5; f=
+ont-weight:bold" rel=3D"noopener" data-hs-link-id=3D"0" data-hs-link-id-v2=
+=3D"3jveLdYv" target=3D"_blank">Building Applications with Gemini Code Assi=
+st</a></li>
+</ul></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1757449690258" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1757449690258_0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:18px; color:#232342; w=
+ord-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_1=
+7574496902401" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper=
+_type_module" style=3D"color: inherit; font-size: inherit; line-height: inh=
+erit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><tab=
+le role=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"=
+vertical-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#232342; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #000000;width:50%;marg=
+in:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #000000;wid=
+th:280px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1743634585155" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff; padding-bottom:20px; pad=
+ding-top:20px" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-bottom:20px; padding-top:=
+20px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1743634585155_0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:18px; color:#232342; w=
+ord-break:break-word; padding:0px 20px 10px"><div id=3D"hs_cos_wrapper_modu=
+le_17333706737511" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wra=
+pper_type_module" style=3D"color: inherit; font-size: inherit; line-height:=
+ inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module">=
+<div id=3D"hs_cos_wrapper_module_17333706737511_" class=3D"hs_cos_wrapper h=
+s_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit=
+; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"wi=
+dget" data-hs-cos-type=3D"rich_text"><p style=3D"font-size:16px; line-heigh=
+t:175%">In addition, we made some enhancements to this popular resource:</p=
+>
+<ul style=3D"line-height:175%">
+<li style=3D"font-size: 18px; line-height: 175%;"><a href=3D"https://learn.=
+educative.io/e3t/Ctc/RG+113/cz5H404/VW_-3K279YHtW64-svs3WBGLMW4vJbXQ5ChGLmN=
+412xbY3qgz0W95jsWP6lZ3pQW7G2-fS4cf-vQN7SqxQy1n0tCVd7Qw-38qyJMW3W-yLd6HPxRHN=
+4PxKlbLHyfLW7Yh3lF8xHDTrW69zfZ-6FLf_hV2SRTW1dbh9KW6CVz9D4cnCY-W5q3csk3cTYrq=
+W5bF08D4D8Yt5W6BJgrb2JfL6yW2Qmpfr5mJ58mW2ppxDy7FJBF1VY1_Yh94jhlRN8t--2gVr8s=
+xW9f8m__31hFh3W9dnCd87r92k4W8NFFJc2T3ylGV63fb24LYLrzW8SDtRB6X801VW5sw8S54mC=
+gTrW8lGXC97JL-W7VYL3-m2dqRHrW5C_VHX13mLdrW1zbDYm8D_GmBW39v-4B1KRLllW5PMsxH7=
+RLLHLW6QP8Lc2WY-TNW3xzSLV86mw31f94F1l004" style=3D"color:#4951f5; font-weig=
+ht:bold" rel=3D"noopener" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"XNLV9=
+02Z" target=3D"_blank">Become an Agentic AI Expert</a></li>
+</ul>
+<p style=3D"font-size:16px; line-height:150%">Please enjoy and share your f=
+eedback.</p>
+<p style=3D"font-size:16px; line-height:150%">&nbsp;</p>
+<p style=3D"font-size:16px; line-height:150%"><span style=3D"color: #000000=
+;">- The Educative Team</span></p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1730262709971" class=3D"hse-section hse-section-last" =
+style=3D"padding-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#DFE8F2; padding-top:20px" bgcolo=
+r=3D"#DFE8F2">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#DFE8F2">
+      <tr style=3D"background-color:#DFE8F2;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-top:20px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1730262709971_0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:18px; color:#232342; w=
+ord-break:break-word; padding:0px 20px"><div id=3D"hs_cos_wrapper_module-3-=
+0-6" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modu=
+le" style=3D"color: inherit; font-size: inherit; line-height: inherit;" dat=
+a-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D=
+"presentation" class=3D"hse-footer hse-secondary" width=3D"100%" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"font-family:Arial, sans-serif; font-size=
+:12px; line-height:135%; color:#23496d; margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; font-size:18px; color:#232342; word-break:break-word; tex=
+t-align:center; margin-bottom:0; line-height:135%; padding:10px 20px">
+          <p style=3D"font-size: 10px; line-height: 125%;"><span style=3D"f=
+ont-size: 10px;">Educative, 12280 NE District Way, Bellevue,WA,&nbsp;98005&=
+nbsp;United States</span></p>
+<p style=3D"font-size: 10px; line-height: 125%;"><span style=3D"color: #545=
+2ff; font-size: 10px;"><span style=3D"color: #a1a8ff;"><a href=3D"https://l=
+earn.educative.io/hs/preferences-center/en/page?data=3DW2nXS-N30h-GgW2vSX7Q=
+4krYDcW2RhQj-43WJYHW3jr3Nx3BYtxbW23kjYl3bhrQYW4p9pnT4mzQ9JW4pnbJn23nc65W1L7=
+VzQ45GzS3W2YD3bX22YtV7W4rBb823M2gsxW251Kng1N4KbVW2HsZ5s3T49p2W3bj8m72-GkR3W=
+4rw4bG3QTJBLW3zb3t72RzmH2W2sPP3p2HR30MW3SBY0440053BW23mpG53JHZvhW2WfhcY3M7g=
+83W3F9zpG1YX2tNW1QCR-S4t5GhgW47F3Q42-g62BW4fhzJs1NlxT3W3jdjND2vP-TrW30DTVt4=
+3CRjFW2KQsTf3jf4ScW4klSRW1S8ZG8W2Yx1GW3QDSD7W213PfP2CVl1nW2xXVCk4rmYg_W36Cr=
+kt32b13-W2CwPSw3SC27FW4tzCVs2KDtm-W3T1hhq30b_dMW1LrgNS3W3zxTW4kpsR647pdMWW2=
+YCGq23h-6VkW3jsLqY4kb7xnW36xhzt3j6XGCW3DLTN0367TnbW1LmXBV2-cCC6W1Nh9Xq3H4nf=
+cW43ZBSL3DX2HYW21kscv41G3zjW1Nx2xJ2p8R6zW2Tt_HV3bdS9kW3_vc9L2zJBVQW4r49nN1L=
+HF94W1Ztrhy3K52RQW4hg3Fm1ZnkDZ0&amp;utm_campaign=3Dinformational&amp;utm_so=
+urce=3Dhs_automation&amp;utm_medium=3Demail&amp;utm_content=3D379805802&amp=
+;_hsenc=3Dp2ANqtz--R4ppvyMQ6tIMjzXQJ4oHAohEjno3GeelS6LmSDxY4iRqmz-wHfGRdC_n=
+Nkc8W8rTrPv-cwmWxafuxijKSjCtqah0T-Q&amp;_hsmi=3D379805802" style=3D"color:#=
+a1a8ff" rel=3D"noopener" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"qjPJqC=
+op" target=3D"_blank">Email Preferences</a></span></span></p>
+      </td>
+    </tr>
+  </tbody>
+</table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://learn.educative.io/e3t/Cto/RG+113/cz5H404/VW_-3K279YHtW=
+64-svs3WBGLMW4vJbXQ5ChGLmW412wYS3D52F5122" alt=3D"" width=3D"1" height=3D"1=
+" border=3D"0" style=3D"display:none!important;min-height:1px!important;wid=
+th:1px!important;border-width:0!important;margin-top:0!important;margin-bot=
+tom:0!important;margin-right:0!important;margin-left:0!important;padding-to=
+p:0!important;padding-bottom:0!important;padding-right:0!important;padding-=
+left:0!important"></body></html>
+------=_Part_215992_1339117078.1757531226569--
+
